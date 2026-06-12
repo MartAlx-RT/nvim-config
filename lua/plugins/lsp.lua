@@ -60,6 +60,18 @@ return {
 		--		capabilities = capabilities
 		--	}
 
+		vim.lsp.config('texlab', {
+			capabilities = capabilities,
+			settings = {
+				texlab = {
+					build = {
+						onSave = false,
+					},
+				},
+			},
+		})
+		vim.lsp.enable('texlab')
+
 		vim.lsp.config('clangd', {
 		  capabilities = capabilities
 		})
